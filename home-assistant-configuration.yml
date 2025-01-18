@@ -1,0 +1,11 @@
+# Truncated...
+
+sensor:
+  - platform: rest
+    name: Server Usage
+    resource: http://<IP_ADDRESS_OF_YOUR_DOCKER_HOST>:5590/pendrive
+    unit_of_measurement: "%"
+    value_template: "{{value_json.usage_percent}}"
+    unique_id: gc_server_pendrive_usage
+    
+# Truncated...
