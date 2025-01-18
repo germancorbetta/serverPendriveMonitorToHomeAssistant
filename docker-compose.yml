@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  python-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: germancorbetta/pendrivesensor
+    ports:
+      - "5590:5590"
+    # Here the actual address of the pendrive. It could be <your_pendrive_pwd>:/mnt/pendrive
+    volumes:
+      - "/mnt/pendrive:/mnt/pendrive"
+    restart: always
